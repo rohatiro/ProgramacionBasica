@@ -1,0 +1,16 @@
+{
+  "name": "ProgramacionBasica",
+  "version": "0.0.0",
+  "description": "Ejemplo de la clase de Programación Basica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "programacion",
+    "basica",
+    "nodejs"
+  ],
+  "author": "rohatiro",
+  "license": "ISC"
+}
