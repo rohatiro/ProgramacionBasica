@@ -1,0 +1,9 @@
+Daño = 0.01 * B * E * V * ((((0.2 * N + 1) * A * P)/(25 / D)) + 2)
+
+N = Nivel del Pokémon que ataca.
+A = Cantidad de ataque o ataque especial del Pokémon. Si el ataque que utiliza el Pokémon es físico se toma la cantidad de ataque y si es especial se toma la cantidad de ataque especial.
+P = Poder del ataque, el potencial del ataque.
+D = Cantidad de defensa del Pokémon rival. Si el ataque que hemos utilizado es físico cogeremos la cantidad de defensa del Pokémon rival, si el ataque que hemos utilizado es especial, se coge la cantidad de defensa especial del Pokémon rival.
+B = Bonificación. Si el ataque es del mismo tipo que el Pokémon que lo lanza toma un valor de 1.5, si el ataque es de un tipo diferente al del Pokémon que lo lanza toma un valor de 1.
+E = Efectividad. Puede tomar los valores de 0, 0.25, 0.5, 1, 2 y 4.
+V = Variación. Es una variable que comprende todos los valores discretos entre 85 y 100 (ambos incluidos).
