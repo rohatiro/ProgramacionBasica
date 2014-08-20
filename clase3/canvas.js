@@ -18,35 +18,39 @@ function inicio()
 function dibujarGrilla () 
 {
     var pony = lienzo;
-    var rayas = Number(t.value);
+    var rayas = Number(t.value) + 1;
     var ancho = 300, alto = 300;
-    var linea, punto;
-    var anchoLinea = ancho / rayas;
-    var limiteX = ancho / anchoLinea;
-    var limiteY = alto / anchoLinea;
+    var linea, puntoX, puntoY;
+
+    var anchoLinea = (ancho / (rayas / 2));
+    var limiteX = (ancho / anchoLinea);
+    var limiteY = (alto / anchoLinea);
 
     pony.strokeStyle = "#AAA";
 
-    for(linea = 0; linea <= limiteX; linea++)
+    for(linea = 1; linea < (limiteX * 2); linea++)
     {
-        punto = (linea * anchoLinea) - 0.5;
+        puntoX = (linea * anchoLinea);
+        puntoY = alto - (linea * anchoLinea);
+        console.log(puntoX, 300, 0, puntoY);
         pony.beginPath();
         pony.strokeStyle = "#AAA";
-        pony.moveTo(punto, 0.5);
-        pony.lineTo(punto, ancho-0.5);
+        pony.moveTo(puntoX, 300);
+        pony.lineTo(0, puntoY);
         pony.stroke();
         pony.closePath();
     }
 
-    for(linea = 0; linea <= limiteY; linea++)
+    for(linea = 1; linea < (limiteX * 2); linea++)
     {
-        punto = (linea * anchoLinea) - 0.5;
+        puntoX = (linea * anchoLinea);
+        puntoY = (linea * anchoLinea);
+        console.log(puntoX, 0, 0, puntoY);
         pony.beginPath();
         pony.strokeStyle = "#AAA";
-        pony.moveTo(0.5, punto);
-        pony.lineTo(alto  - 0.5, punto);
+        pony.moveTo(puntoX, 0);
+        pony.lineTo(0, puntoY);
         pony.stroke();
         pony.closePath();
     }
-
 }
